@@ -1,3 +1,4 @@
+![image](https://github.com/abhijitray7810/89-days-of-MLOps-kodekloud/blob/d348faa8e775ae356c7cc936a0ea0db1035857ee/Day%2012%3A%20Configure%20a%20DVC%20Remote%20Storage/Screenshot%202026-05-24%20110202.png)
 ```bash id="vwhqqm"
 cd /root/code/fraud-detection
 
