@@ -1,6 +1,6 @@
 # Welcome to Your KK Development Environment 🚀
 
-This workspace provides a fully-functional **Visual Studio Code** editor to develop, test, and debug your projects.
+This workspace provides a fully-functional **Visual Studio Code** editor to develop, test, and debug your project s.
 
 ---
 
