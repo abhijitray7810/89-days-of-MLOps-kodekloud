@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python src/data/process_data.py
+    deps:
+    - path: data/raw/transactions.csv
+      hash: md5
+      md5: 262600809db02a8f3b97351c93c27784
+      size: 549
+    - path: src/data/process_data.py
+      hash: md5
+      md5: 0cdd7e3dbbe1e04f6b35bd38929b3b1f
+      size: 263
+    outs:
+    - path: data/processed/clean_transactions.csv
+      hash: md5
+      md5: 16ee9b988c5a51591382422b56e11960
+      size: 537
+  split_data:
+    cmd: python src/data/split_data.py
+    deps:
+    - path: data/processed/clean_transactions.csv
+      hash: md5
+      md5: 16ee9b988c5a51591382422b56e11960
+      size: 537
+    - path: src/data/split_data.py
+      hash: md5
+      md5: 42ce7c36686f56b713685884992fa160
+      size: 363
+    outs:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 1a1fff319308070eb2bd682506d72faa
+      size: 145
+    - path: data/processed/train.csv
+      hash: md5
+      md5: 142467e5074926d5eb5e7154aa456c25
+      size: 441
