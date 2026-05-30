@@ -5,7 +5,7 @@ This project contains the corrected JupyterLab configuration for the xFusionCorp
 
 ## Requirements
 
-The JupyterLab server must:
+The JupyterLab server must: 
 
 - Listen on port `8888`
 - Bind to `0.0.0.0`
