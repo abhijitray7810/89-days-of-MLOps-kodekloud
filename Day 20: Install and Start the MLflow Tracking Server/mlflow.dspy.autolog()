@@ -1,0 +1,15 @@
+import dspy
+
+mlflow.dspy.autolog()
+
+# Configure the LLM to use. Please ensure that
+# the OPENAI_API_KEY environment variable is set
+lm = dspy.LM("openai/gpt-4o-mini")
+dspy.configure(lm=lm)
+
+# Define a simple chain-of-thought model and run it
+math = dspy.ChainOfThought("question -> answer: float")
+question = "Two dice are tossed. What is the probability that the sum equals two?"
+
+# All intermediate outputs from the execution will be logged
+math(question=question)
