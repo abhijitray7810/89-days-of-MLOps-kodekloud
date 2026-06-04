@@ -1,0 +1,17 @@
+import os
+import anthropic
+
+# Enable auto-tracing for Anthropic
+mlflow.anthropic.autolog()
+
+# Configure your API key (please ensure that the "ANTHROPIC_API_KEY" environment variable is set)
+client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+# Inputs and outputs of API calls will be logged as a trace
+message = client.messages.create(
+    model="claude-3-5-sonnet-20241022",
+    max_tokens=1024,
+    messages=[
+        {"role": "user", "content": "Hello, Claude"},
+    ],
+)
