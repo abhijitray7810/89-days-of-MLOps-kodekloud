@@ -1,0 +1,15 @@
+import boto3
+
+mlflow.bedrock.autolog()
+
+# Ensure that your boto3 client has the necessary auth information
+bedrock = boto3.client(
+    service_name="bedrock-runtime",
+    region_name="<REPLACE_WITH_YOUR_AWS_REGION>",
+)
+
+model = "anthropic.claude-3-5-sonnet-20241022-v2:0"
+messages = [{ "role": "user", "content": [{"text": "Hello!"}]}]
+
+# All intermediate executions within the chat session will be logged
+bedrock.converse(modelId=model, messages=messages)
