@@ -1,0 +1,9 @@
+import litellm
+
+mlflow.litellm.autolog()
+
+# Ensure that the "OPENAI_API_KEY" environment variable is set
+messages = [{"role": "user", "content": "Hello!"}]
+
+# Inputs and outputs of the API request will be logged in a trace
+litellm.completion(model="gpt-4o-mini", messages=messages)
