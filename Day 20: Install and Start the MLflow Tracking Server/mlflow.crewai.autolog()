@@ -1,0 +1,40 @@
+from crewai import Agent, Crew, Process, Task
+
+mlflow.crewai.autolog()
+
+city_selection_agent = Agent(
+    role="City selection expert",
+    goal="Select the best city based on weather, season, and prices",
+    backstory="An expert in analyzing travel data to pick ideal destinations",
+    allow_delegation=True,
+    verbose=True,
+)
+
+local_expert = Agent(
+    role="Local expert",
+    goal="Provide the best insights about the selected city",
+    backstory="A local guide with extensive information about the city",
+    verbose=True,
+)
+  
+plan_trip = Task(
+    name="Plan a trip",
+    description="""Plan a trip to a city based on weather, prices, and best local attractions. 
+    Please consult with a local expert when researching things to do.""",
+    expected_output="A short summary of the trip destination and key things to do",
+    agent=city_selection_agent,
+)
+
+crew = Crew(
+  agents=[
+    city_selection_agent,
+    local_expert,
+  ],
+  tasks=[plan_trip],
+  process=Process.sequential
+)
+
+# Ensure the "OPENAI_API_KEY" environment variable is set
+# before kicking off the crew. All intermediate agent outputs
+# will be logged in the resulting trace.
+crew.kickoff()
