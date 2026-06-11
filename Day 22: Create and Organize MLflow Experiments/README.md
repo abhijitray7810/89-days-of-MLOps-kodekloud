@@ -14,7 +14,7 @@ Use the following shortcuts to open the integrated terminal:
 
 ---
  
-## Debugging
+## Debugging 
 
 1. Set breakpoints in your code.
 2. Press **F5** to start debugging.
