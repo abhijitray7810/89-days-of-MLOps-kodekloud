@@ -10,7 +10,7 @@ This workspace provides a fully-functional **Visual Studio Code** editor to deve
 Use the following shortcuts to open the integrated terminal:
 
 - **macOS**: `⌃` + `⇧` + `` ` ``
-- **Windows/Linux**: `Ctrl` + `Shift` + `` ` ``
+- **Windows/Linux**: `Ctrl` + `Shift` + `` ` `` 
 
 ---
  
