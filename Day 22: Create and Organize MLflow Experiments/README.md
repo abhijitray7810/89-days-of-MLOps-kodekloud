@@ -3,7 +3,7 @@
 This workspace provides a fully-functional **Visual Studio Code** editor to develop, test, and debug your projects.
 
 ---
-
+ 
 ## Getting Started
 
 ### Open a New Terminal
