@@ -13,7 +13,7 @@ Use the following shortcuts to open the integrated terminal:
 - **Windows/Linux**: `Ctrl` + `Shift` + `` ` ``
 
 ---
-
+ 
 ## Debugging
 
 1. Set breakpoints in your code.
