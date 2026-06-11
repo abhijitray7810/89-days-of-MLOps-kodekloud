@@ -11,7 +11,7 @@ Use the following shortcuts to open the integrated terminal:
 
 - **macOS**: `⌃` + `⇧` + `` ` ``
 - **Windows/Linux**: `Ctrl` + `Shift` + `` ` `` 
-
+ 
 ---
  
 ## Debugging 
